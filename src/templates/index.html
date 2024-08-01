@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+</head>
+<body>
+    <h1>Medical Cost to cure disease caused by smoking</h1>
+    <form action="/" method="post">
+        <label for="val1">Age:</label>
+        <input type="number" step="any" name="val1" id="val1" placeholder="Enter age" required><br>
+
+        <label for="val2">BMI:</label>
+        <input type="number" step="any" name="val2" id="val2" placeholder="Enter BMI" required><br>
+
+        <label for="val3">Children:</label>
+        <input type="number" step="1" name="val3" id="val3" placeholder="Enter number of children" required><br>
+
+        <label for="val4">Sex (Female):</label>
+        <input type="number" step="1" name="val4" id="val4" placeholder="Enter 1 if female, 0 otherwise" required><br>
+
+        <label for="val5">Sex (Male):</label>
+        <input type="number" step="1" name="val5" id="val5" placeholder="Enter 1 if male, 0 otherwise" required><br>
+
+        <label for="val6">Smoker (No):</label>
+        <input type="number" step="1" name="val6" id="val6" placeholder="Enter 1 if not a smoker, 0 otherwise" required><br>
+
+        <label for="val7">Smoker (Yes):</label>
+        <input type="number" step="1" name="val7" id="val7" placeholder="Enter 1 if smoker, 0 otherwise" required><br>
+
+        <label for="val8">Region (Northeast):</label>
+        <input type="number" step="1" name="val8" id="val8" placeholder="Enter 1 if Northeast, 0 otherwise" required><br>
+
+        <label for="val9">Region (Northwest):</label>
+        <input type="number" step="1" name="val9" id="val9" placeholder="Enter 1 if Northwest, 0 otherwise" required><br>
+
+        <label for="val10">Region (Southeast):</label>
+        <input type="number" step="1" name="val10" id="val10" placeholder="Enter 1 if Southeast, 0 otherwise" required><br>
+
+        <label for="val11">Region (Southwest):</label>
+        <input type="number" step="1" name="val11" id="val11" placeholder="Enter 1 if Southwest, 0 otherwise" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
